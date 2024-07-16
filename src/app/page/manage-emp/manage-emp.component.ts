@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 export class ManageEmpComponent {
 
   public employeeObj={
-    fistName:"",
+    firstName:"",
     lastName:"",
     email:"",
     departmentId:"",
