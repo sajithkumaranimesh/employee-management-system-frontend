@@ -1,3 +1,5 @@
+<app-nav></app-nav>
+
 <h1 class="text-center mb-4 bg-info p-4 text-white fw-bold">View Employee</h1>
 
 <div class="container">
@@ -14,13 +16,13 @@
         </tr>
         <tr class="border text-center" *ngFor="let employee of employeeList; index as i;">
             <td>{{i+1}}</td>
-            <td>{{employee.id}}</td>
+            <td>{{"EMP#000"+employee.id}}</td>
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
             <td>{{employee.email}}</td>
             <td>{{employee.departmentId}}</td>
             <td>{{employee.roleId}}</td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button></td>
         </tr>
     </table>
 </div>
